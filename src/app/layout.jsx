@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full">
         {/* Navbar */}
         <header className=" bg-gradient-to-r from-orange-200 to-orange-400 ">
-          <div className="max-w-[1280px] mx-auto flex items-center justify-between  text-black">
+          <div className="max-w-[1280px] mx-auto flex items-center justify-between  text-black px-2 md:px-4">
             {/* Logo */}
             <Link href="/">
               <img
