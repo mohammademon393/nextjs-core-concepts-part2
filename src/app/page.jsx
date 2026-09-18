@@ -1,7 +1,19 @@
+import Header from "./components/Header";
+
 export default function Home() {
   return (
     <div>
-      NextJs core concepts part-2
+      <header>
+        <Header />
+      </header>
+
+      <main>
+
+      </main>
+      
+      <footer>
+
+      </footer>
     </div>
   );
 }
