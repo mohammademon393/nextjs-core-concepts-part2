@@ -3,7 +3,7 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className='bg-gradient-to-r from-blue-100 to-blue-400'>
+        <div className='bg-gradient-to-r from-orange-200 to-orange-400'>
 
       <div className="flex flex-col-reverse md:flex-row items-center justify-between  p-8 gap-8 md:gap-16 max-w-[1280px] mx-auto">
         {/* left side */}

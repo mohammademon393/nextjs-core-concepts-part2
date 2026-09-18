@@ -25,8 +25,8 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full">
         {/* Navbar */}
-        <header className=" bg-gradient-to-r from-blue-100 to-blue-400 ">
-          <div className="max-w-[1280px] mx-auto flex items-center justify-between p-2 text-black">
+        <header className=" bg-gradient-to-r from-orange-200 to-orange-400 ">
+          <div className="max-w-[1280px] mx-auto flex items-center justify-between  text-black">
             {/* Logo */}
             <Link href="/">
               <img
@@ -40,14 +40,14 @@ export default function RootLayout({ children }) {
             <nav className="flex gap-6 font-medium text-white">
               <Link
                 href="/foods"
-                className="hover:text-orange-700 transition duration-300"
+                className="hover:text-blue-700 hover:underline transition duration-300"
               >
                 Foods
               </Link>
 
               <Link
                 href="/reviews"
-                className="hover:text-orange-700 transition duration-300"
+                className="hover:text-blue-700 hover:underline transition duration-300"
               >
                 Reviews
               </Link>
