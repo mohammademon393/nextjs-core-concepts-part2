@@ -1,16 +1,16 @@
-import Header from "./components/Header";
+import Banner from "./components/Banner";
 
 export default function Home() {
   return (
     <div>
       <header>
-        <Header />
+        <Banner />
       </header>
 
       <main>
 
       </main>
-      
+
       <footer>
 
       </footer>

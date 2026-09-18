@@ -23,44 +23,40 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-
+      <body className="min-h-full">
         {/* Navbar */}
-        <header className="flex items-center justify-between p-2 bg-gradient-to-r from-blue-100 to-blue-400 text-black">
-          
-          {/* Logo */}
-          <Link href="/">
-            <img
-              src="/logo2.png"
-              alt="Bhojonbilash Restaurant Logo"
-              className="h-20 w-32 object-contain"
-            />
-          </Link>
-
-          {/* Navigation */}
-          <nav className="flex gap-6 font-medium text-white">
-            <Link
-              href="/foods"
-              className="hover:text-orange-700 transition duration-300"
-            >
-              Foods
+        <header className=" bg-gradient-to-r from-blue-100 to-blue-400 ">
+          <div className="max-w-[1280px] mx-auto flex items-center justify-between p-2 text-black">
+            {/* Logo */}
+            <Link href="/">
+              <img
+                src="/logo2.png"
+                alt="Bhojonbilash Restaurant Logo"
+                className="h-20 w-40 object-contain"
+              />
             </Link>
 
-            <Link
-              href="/reviews"
-              className="hover:text-orange-700 transition duration-300"
-            >
-              Reviews
-            </Link>
-          </nav>
+            {/* Navigation */}
+            <nav className="flex gap-6 font-medium text-white">
+              <Link
+                href="/foods"
+                className="hover:text-orange-700 transition duration-300"
+              >
+                Foods
+              </Link>
 
+              <Link
+                href="/reviews"
+                className="hover:text-orange-700 transition duration-300"
+              >
+                Reviews
+              </Link>
+            </nav>
+          </div>
         </header>
 
         {/* Page Content */}
-        <main className="flex-1">
-          {children}
-        </main>
-
+        <main>{children}</main>
       </body>
     </html>
   );
