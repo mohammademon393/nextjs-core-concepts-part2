@@ -5,6 +5,7 @@ const getFoods = async () => {
     const res = await fetch(
       "https://taxi-kitchen-api.vercel.app/api/v1/foods/random");
       const data = await res.json();
+      await new Promise((resolve) => setTimeout(resolve, 3000)); // Simulate a delay of 1 second
       return data.foods || [];
 }
 
