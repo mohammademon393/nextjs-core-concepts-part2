@@ -4,7 +4,7 @@ const FoodCard = ({ food }) => {
   const { id, title, foodImg, price, category } = food;
 
   return (
-    <div className="group overflow-hidden rounded-2xl bg-white shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+    <div className="group overflow-hidden rounded-xl bg-white shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl">
       {/* Food Image */}
       <div className="relative h-56 overflow-hidden">
         <img

@@ -25,14 +25,14 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full">
         {/* Navbar */}
-        <header className=" bg-gradient-to-r from-orange-200 to-orange-400 ">
-          <div className="max-w-[1280px] mx-auto flex items-center justify-between  text-black px-2 md:px-4">
+        <header className="bg-gradient-to-r from-blue-300 to-orange-400 sticky top-0 z-50">
+          <div className="max-w-7xl mx-auto flex items-center justify-between text-black px-2 py-2 md:px-4">
             {/* Logo */}
             <Link href="/">
               <img
                 src="/logo2.png"
                 alt="Bhojonbilash Restaurant Logo"
-                className="h-20 w-40 object-contain"
+                className="h-20 w-30 object-cover"
               />
             </Link>
 
