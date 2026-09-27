@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 
 const ReviewsCard = ({ review }) => {
   const {
@@ -10,6 +12,22 @@ const ReviewsCard = ({ review }) => {
     likes,
     date,
   } = review;
+
+  // Initial like count
+  const [likeCount, setLikeCount] = useState(likes?.length || 0);
+
+  // Like state
+  const [isLiked, setIsLiked] = useState(false);
+
+  const handleLike = () => {
+    if (isLiked) {
+      setLikeCount((prev) => prev - 1);
+      setIsLiked(false);
+    } else {
+      setLikeCount((prev) => prev + 1);
+      setIsLiked(true);
+    }
+  };
 
   return (
     <div className="group rounded-2xl border border-orange-100 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
@@ -59,15 +77,30 @@ const ReviewsCard = ({ review }) => {
       {/* Footer */}
       <div className="flex items-center justify-between border-t border-gray-100 pt-4">
 
-        {/* Likes */}
-        <div className="flex items-center gap-2 text-sm text-gray-500">
-          <span className="text-lg text-red-500">♥</span>
+        {/* Like Button */}
+        <button
+          onClick={handleLike}
+          type="button"
+          className={`group/like flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-medium transition duration-300 ${
+            isLiked
+              ? "bg-red-50 text-red-500"
+              : "text-gray-500 hover:bg-red-50 hover:text-red-500"
+          }`}
+        >
+          <span
+            className={`text-xl transition duration-300 ${
+              isLiked
+                ? "scale-110 text-red-500"
+                : "text-gray-400 group-hover/like:text-red-500"
+            }`}
+          >
+            {isLiked ? "♥" : "♡"}
+          </span>
 
           <span>
-            {likes?.length || 0}{" "}
-            {likes?.length === 1 ? "Like" : "Likes"}
+            {likeCount} {likeCount === 1 ? "Like" : "Likes"}
           </span>
-        </div>
+        </button>
 
         {/* Date */}
         <time
