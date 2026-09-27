@@ -1,5 +1,5 @@
 import React from 'react';
-import FoodCard from '../components/FoodCard';
+import FoodCard from '../components/cards/FoodCard';
 
 const getFoods = async () => {
     const res = await fetch(
